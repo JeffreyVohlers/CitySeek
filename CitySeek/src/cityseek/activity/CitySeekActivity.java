@@ -46,10 +46,23 @@ public class CitySeekActivity extends MapActivity {
 		locationListener = new GPSLocationListener();
 
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
-				2500, 10, locationListener);
+				3000, 5, locationListener);
 		mc = mapView.getController();
 		mc.setZoom(12);
 
+	}
+
+	@Override
+	protected void onResume() {
+		super.onResume();
+		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
+				3000, 5, locationListener);
+	}
+
+	@Override
+	protected void onPause() {
+		super.onPause();
+		locationManager.removeUpdates(locationListener);
 	}
 
 	@Override
