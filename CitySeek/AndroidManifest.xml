@@ -12,7 +12,7 @@
         android:debuggable="true" >
         <uses-library android:name="com.google.android.maps" /> 
         <activity
-            android:name=".CitySeekActivity"
+            android:name="cityseek.activity.CitySeekActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
