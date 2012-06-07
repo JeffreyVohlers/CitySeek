@@ -4,6 +4,8 @@ import java.util.List;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.location.Location;
 import android.location.LocationListener;
@@ -62,8 +64,10 @@ public class CitySeekActivity extends MapActivity {
 	}
 
 	private void initPointsOfInterest() {
-		Drawable drawable = this.getResources().getDrawable(
-				R.drawable.blue_pin_0);
+		Drawable drawable = new BitmapDrawable(Bitmap.createScaledBitmap(
+				((BitmapDrawable) getResources()
+						.getDrawable(R.drawable.redflag)).getBitmap(), 40, 40,
+				false));
 		PinsOverlay pinOverlay = new PinsOverlay(drawable, this);
 		List<cityseek.activity.Location> pins = ReadXMLFile
 				.getPinsForSeeker(this.getResources().getXml(R.xml.arthurpins));

@@ -26,12 +26,7 @@ public class OurLocationOverlay extends MyLocationOverlay {
 		super(context, mapView);
 		this.mapView = mapView;
 		uRHere = Bitmap.createScaledBitmap(BitmapFactory.decodeResource(
-				context.getResources(), R.drawable.urhere), 30, 30, false); // TODO:
-																			// Change
-																			// size
-																			// and
-																			// R
-																			// lookup
+				context.getResources(), R.drawable.appfoxhead), 30, 41, false);
 	}
 
 	@Override
@@ -42,9 +37,8 @@ public class OurLocationOverlay extends MyLocationOverlay {
 			this.width = mapView.getWidth();
 		}
 		mapView.getProjection().toPixels(myLocation, currentPoint);
-		canvas.drawBitmap(uRHere, currentPoint.x, currentPoint.y - 40, null); // TODO:
-																				// Change
-																				// proportions
+		canvas.drawBitmap(uRHere, currentPoint.x - 15, currentPoint.y - 20,
+				null);
 	}
 
 	@Override
