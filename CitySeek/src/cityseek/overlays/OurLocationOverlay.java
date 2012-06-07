@@ -1,4 +1,4 @@
-package cityseek.resources;
+package cityseek.overlays;
 
 import android.content.Context;
 import android.graphics.Bitmap;

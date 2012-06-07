@@ -1,0 +1,62 @@
+<locations>
+	<Pin>
+    	<Name>NC Museum of Art</Name>
+	    <Latitude>35.80997</Latitude>
+    	<Longitude>-78.7027</Longitude>
+    	<Address>2110 Blue Ridge Road, Raleigh, NC</Address>
+	</Pin>
+	<Pin>
+    	<Name>Raliegh Memorial Concert Hall</Name>
+	    <Latitude>35.77145</Latitude>
+    	<Longitude>-78.63961</Longitude>
+	    <Address>2 East South Street, Raleigh, NC</Address>
+	</Pin>
+	<Pin>
+    	<Name>Pullen Park</Name>
+	    <Latitude>35.78096</Latitude>
+    	<Longitude>-78.6647</Longitude>
+    	<Address>398 Ashe Avenue, Raleigh, NC</Address>
+	</Pin>
+	<!--Pin>
+    	<Name>Raliegh Memorial Concert Hall</Name>
+	    <Latitude>35.77145</Latitude>
+    	<Longitude>-78.63961</Longitude>
+	    <Address>2 East South Street, Raleigh, NC</Address>
+	</Pin-->
+	<Pin>
+    	<Name>NCSU Design School</Name>
+	    <Latitude>35.78457</Latitude>
+    	<Longitude>-78.66474</Longitude>
+    	<Address>50 Pullen Road, Raleigh, NC</Address>
+	</Pin>
+	<Pin>
+    	<Name>Moore Square</Name>
+	    <Latitude>35.77754</Latitude>
+    	<Longitude>-78.63581</Longitude>
+	    <Address>200 South Blount Street, Raleigh, NC</Address>
+	</Pin>
+	<Pin>
+    	<Name>Hedron</Name>
+	    <Latitude>35.77978</Latitude>
+    	<Longitude>-78.64339</Longitude>
+    	<Address>S Dawson St and W Morgan St, Raleigh, NC 27603</Address>
+	</Pin>
+	<Pin>
+    	<Name>Shelly Park</Name>
+	    <Latitude>35.85879</Latitude>
+    	<Longitude>-78.6618</Longitude>
+	    <Address>1400 West Millbrook Road, Raleigh, NC</Address>
+	</Pin>
+	<Pin>
+    	<Name>Contemporary Art Museum</Name>
+	    <Latitude>35.77713</Latitude>
+    	<Longitude>-78.6453</Longitude>
+    	<Address>409 W Martin St, Raleigh, NC</Address>
+	</Pin>
+	<Pin>
+    	<Name>Artspace</Name>
+	    <Latitude>35.77568</Latitude>
+    	<Longitude>-78.63662</Longitude>
+	    <Address>201 East Davie Street, Raleigh, NC</Address>
+	</Pin>
+</locations>
