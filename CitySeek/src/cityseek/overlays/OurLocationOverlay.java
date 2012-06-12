@@ -6,7 +6,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Point;
 import android.location.Location;
-import cityseekers.activity.R;
+import cityseek.activity.R;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapView;

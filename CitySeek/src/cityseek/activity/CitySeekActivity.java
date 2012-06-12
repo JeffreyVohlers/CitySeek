@@ -14,7 +14,6 @@ import android.os.Bundle;
 import cityseek.overlays.OurLocationOverlay;
 import cityseek.overlays.PinsOverlay;
 import cityseek.resources.ReadXMLFile;
-import cityseekers.activity.R;
 
 import com.google.android.maps.GeoPoint;
 import com.google.android.maps.MapActivity;
@@ -66,8 +65,8 @@ public class CitySeekActivity extends MapActivity {
 	private void initPointsOfInterest() {
 		Drawable drawable = new BitmapDrawable(Bitmap.createScaledBitmap(
 				((BitmapDrawable) getResources()
-						.getDrawable(R.drawable.redflag)).getBitmap(), 40, 40,
-				false));
+						.getDrawable(R.drawable.redflag)).getBitmap(), 100,
+				100, false));
 		PinsOverlay pinOverlay = new PinsOverlay(drawable, this);
 		List<cityseek.activity.Location> pins = ReadXMLFile
 				.getPinsForSeeker(this.getResources().getXml(R.xml.arthurpins));
