@@ -1,5 +1,6 @@
 package cityseek.activity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
@@ -42,7 +43,10 @@ public class CitySeekActivity extends MapActivity {
 		setContentView(R.layout.main);
 		initMapView();
 		initMyLocation();
-		initPointsOfInterest();
+		ArrayList<cityseek.activity.Location> pinList = getIntent()
+				.getParcelableArrayListExtra("pinList");
+		initPointsOfIntrest(pinList);
+		// initPointsOfInterest();
 		locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 		locationListener = new GPSLocationListener();
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER,
@@ -72,6 +76,24 @@ public class CitySeekActivity extends MapActivity {
 				.getPinsForSeeker(this.getResources().getXml(R.xml.arthurpins));
 		for (int p = 0; p < pins.size(); p++) {
 			cityseek.activity.Location pin = pins.get(p);
+			OverlayItem item = new OverlayItem(new GeoPoint(
+					(int) (pin.getLatitude() * 1E6),
+					(int) (pin.getLongitude() * 1E6)), pin.getName(),
+					pin.getAddress());
+			pinOverlay.addOverlay(item);
+		}
+		mapView.getOverlays().add(pinOverlay);
+	}
+
+	private void initPointsOfIntrest(
+			ArrayList<cityseek.activity.Location> pinList) {
+		Drawable drawable = new BitmapDrawable(Bitmap.createScaledBitmap(
+				((BitmapDrawable) getResources()
+						.getDrawable(R.drawable.redflag)).getBitmap(), 100,
+				100, false));
+		PinsOverlay pinOverlay = new PinsOverlay(drawable, this);
+		for (int p = 0; p < pinList.size(); p++) {
+			cityseek.activity.Location pin = pinList.get(p);
 			OverlayItem item = new OverlayItem(new GeoPoint(
 					(int) (pin.getLatitude() * 1E6),
 					(int) (pin.getLongitude() * 1E6)), pin.getName(),
