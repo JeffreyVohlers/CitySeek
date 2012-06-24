@@ -122,7 +122,7 @@ public class CitySeekActivity extends MapActivity {
 	}
 
 	public void newActivity() {
-		Intent intent = new Intent(this, ChallengeActivity.class);
+		Intent intent = new Intent(this, SlidingPuzzleActivity.class);
 		startActivity(intent);
 	}
 
